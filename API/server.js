@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import path from "path";
 
 import userRouters from "./routers/userRouts.js"
+import blogRouters from "./routers/blogRouts.js"
 import cookieParser from "cookie-parser";
 
 const app = express();
@@ -29,6 +30,10 @@ mongoose
 
 
 app.use("/",userRouters);
+
+
+
+app.use("/",blogRouters);
 
 
 /*app.get("/api/user/register" ,(req , res)=>{
