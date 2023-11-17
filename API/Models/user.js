@@ -1,7 +1,6 @@
-import express from "express";
 import mongoose from "mongoose";
 
-// CREATE MODEL
+// CREATE user  MODEL
 
 const userSchema = new mongoose.Schema({
   name: {
