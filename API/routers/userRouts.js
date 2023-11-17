@@ -1,5 +1,5 @@
 import express from "express";
-import { userLogin, userLogout, userRegister } from "../Controlers/userControler.js";
+import { userLogin, userLogout, userRegister,getMyProfile } from "../Controlers/userControler.js";
 
 const router = express.Router();
 
@@ -12,6 +12,7 @@ router.get("/register", (req, res) => {
 });
 
 router.post("/api/user/register", userRegister);
+
 router.get("/logIn", (req, res) => {
   res.render("logIn.ejs");
 });
@@ -19,5 +20,8 @@ router.get("/logIn", (req, res) => {
 router.post("/api/user/logIn", userLogin);
 
 router.get("/api/user/logOut", userLogout);
+
+router.get("/user/myProfile", getMyProfile);
+
 
 export default router;
