@@ -3,11 +3,13 @@ import mongoose from "mongoose";
 import path from "path";
 
 import userRouters from "./routers/userRouts.js"
+import cookieParser from "cookie-parser";
+
 const app = express();
 //app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // post from data
 app.use(express.static(path.join(path.resolve(), "pubic"))); // add static file
-//app.use(cookieParser())
+app.use(cookieParser())
 const PORT = 5000;
 
 const url =

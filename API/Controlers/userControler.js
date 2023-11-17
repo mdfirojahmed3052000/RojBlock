@@ -54,6 +54,10 @@ export const userLogout = (req, res) => {
 };
 
 
-export const getMyProfile =()=>{
-  
+export const getMyProfile =(req,res)=>{
+  res.status(200).json({
+    success: false,
+    user: req.user,
+    admin:req.p
+})
 } 
