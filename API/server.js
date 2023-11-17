@@ -1,20 +1,30 @@
 import express from "express";
 import mongoose from "mongoose";
 import path from "path";
-
+import { config } from "dotenv";
 import userRouters from "./routers/userRouts.js"
 import blogRouters from "./routers/blogRouts.js"
 import cookieParser from "cookie-parser";
-
+import cors from "cors"
 const app = express();
 //app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // post from data
 app.use(express.static(path.join(path.resolve(), "pubic"))); // add static file
 app.use(cookieParser())
-const PORT = 5000;
+app.use(cors({
+  origin:[process.env.FRONTED_URL],
+  methods:["GET" ,"POST" , "PUT" , "DELETE"],
+  credentials:true
+}))
 
-const url =
-  "mongodb+srv://newgitpods:VL6eb0rHhdZJ1gv0@mdfirojahmed.chpjhjr.mongodb.net/?retryWrites=true&w=majority";
+config({
+  path:"./data/config.env"
+})
+
+
+const PORT = process.env.PORT;
+
+const url = process.env.MONGO_URL;
 
 //MONGOOSE CONNECT
 mongoose

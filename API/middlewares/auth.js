@@ -12,7 +12,7 @@ export const isSignin =async(req,res,next)=>{
         massage: "plz Login",
     })
 
-    const decode = jwt.verify(token,"FIROJ");
+    const decode = jwt.verify(token,process.config.JWT_SCODE);
 
     console.log(decode);
 
