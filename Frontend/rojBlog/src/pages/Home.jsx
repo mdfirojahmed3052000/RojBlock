@@ -22,14 +22,14 @@ const Home = () => {
       
   },[])
   
-  console.log(allblog);
-  console.log("home");
+  //console.log(allblog);
+  //console.log("home");
   
 
   return (
     <>
-      {allblog.map((blog)=>{
-        return <HomeBlog data={blog}/>
+      {allblog.map((blog,index)=>{
+        return <HomeBlog data={blog} key={index}/>
         
       })}
       
