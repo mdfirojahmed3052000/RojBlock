@@ -5,7 +5,7 @@ const HomeBlog = ({data}) => {
   return (
     <>
       <div className="homeBlog">
-        <h2 className="blogTitle">{data.title}</h2>
+        <h1 className="blogTitle">{data.title}</h1>
         <div className="blogAddOn">
           <img
             width="25"
