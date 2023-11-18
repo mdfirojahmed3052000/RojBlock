@@ -23,7 +23,7 @@ const Login = () => {
       });
       console.log(api);
     } catch (error) {
-      console.log(error);
+      console.warn(error);
     }
   }
   return (

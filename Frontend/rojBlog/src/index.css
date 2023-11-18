@@ -186,6 +186,7 @@ form > input[type="submit"]:hover {
   margin-bottom: 20px;
   align-items: safe;
   justify-content: space-between;
+  overflow: hidden;
 
 }
 .homeBlog .blogDetails .blogDescription{
@@ -198,6 +199,11 @@ form > input[type="submit"]:hover {
   max-width: 40%;
   min-width: 30%;
   border-radius: 20px;
+  
+}
+.homeBlog .blogDetails .blogDetailsImage:hover{
+  /*border: 2px solid blue;*/
+  transform: scale(1.2);
 }
 
 

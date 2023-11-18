@@ -12,10 +12,9 @@ const HomeBlog = ({ data }) => {
         },
       });
       //console.log("user ", userdata.data.user);
-      setuser(userdata.data.user)
+      setuser(userdata.data.user);
     };
-    getUserdata()
-
+    getUserdata();
   }, []);
   //console.log(data);
   return (
@@ -51,6 +50,7 @@ const HomeBlog = ({ data }) => {
             src={data.imgUrl}
             alt="blog image"
           />
+
           <p className="blogDescription">{data.description}</p>
         </div>
       </div>
