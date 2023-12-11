@@ -5,7 +5,9 @@ const Navber = () => {
     <>
       <div className="Navber">
         <div className="left">
-          <h2>ROJ BLOG</h2>
+          <Link to={"/"} className="">
+            <h2>ROJ BLOG</h2>
+          </Link>
         </div>
         <div className="right">
           <Link to={"/register"} className="navitem">
@@ -20,7 +22,9 @@ const Navber = () => {
           <Link to={"/login"} className="navitem">
             <h3>Login</h3>
           </Link>
-          <div className="navitem"><h3>Logout</h3></div>
+          <div className="navitem">
+            <h3>Logout</h3>
+          </div>
         </div>
       </div>
     </>
