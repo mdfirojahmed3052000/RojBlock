@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
 const Login = () => {
-  const [name,setname] =useState("");
+  const [email,setname] =useState("");
   const [password,setpassword] =useState("");
 
   const onSubmit=async (e)=>{
     e.preventDefault();
-    console.log( name , password);
+    console.log( email , password);
     try {
       const url= "https://rojblog.onrender.com/api/user/logIn"
       const api  =  await axios.post(url,{
-        name,
+        email,
         password
       },
       {
@@ -37,7 +37,7 @@ const Login = () => {
             type="email"
             name="email"
             id="email"
-            value={name}
+            value={email}
             onChange={(e)=>setname(e.target.value)}
           />
           <input
