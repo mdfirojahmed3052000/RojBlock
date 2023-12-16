@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import context from "../context/Context";
 
 const Login = () => {
@@ -44,9 +44,6 @@ const Login = () => {
       setTimeout(() => {
         navigate("/profile");
       }, "3000");
-
-      
-
     } catch (error) {
       console.warn(error);
       auth.setIsAuth(false);

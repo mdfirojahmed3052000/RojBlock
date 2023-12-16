@@ -1,7 +1,8 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import context from "../context/Context";
 
 const initialData = {
   title: "",
@@ -10,7 +11,8 @@ const initialData = {
 };
 const AddBlog = () => {
   const [blog, setBlog] = useState(initialData);
-
+  const auth = useContext(context);
+  console.log(auth)
   const inputEvent = (e) => {
     const { name, value } = e.target;
     setBlog({ ...blog, [name]: value });
@@ -27,6 +29,7 @@ const AddBlog = () => {
         withCredentials: true,
       });
       console.log(api);
+      auth.setIsAuth(true);
       toast.success(api.data.massage, {
         position: "top-center",
         autoClose: 5000,
@@ -37,8 +40,12 @@ const AddBlog = () => {
         progress: undefined,
         theme: "dark",
       });
+      setTimeout(() => {
+        navigate('/profile');
+      }, "3000");
     } catch (error) {
       console.warn(error);
+      auth.setIsAuth(false);
       toast.error(error.response.data.massage, {
         position: "top-center",
         autoClose: 5000,
