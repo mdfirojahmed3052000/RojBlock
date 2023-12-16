@@ -22,17 +22,17 @@ const Home = () => {
     fatchBlogData();
   }, []);
 
-  //console.log(allblog);
+  console.log(allblog);
   //console.log("home");
 
   return (
     <>
-      {!allblog ? (
-        <Loder />
-      ) : (
+      {(allblog.length!=0) ? (
         allblog.map((blog, index) => {
           return <HomeBlog data={blog} key={index} />;
         })
+      ) : (
+        <Loder />
       )}
       
     </>
