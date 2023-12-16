@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import context from "../context/Context";
+import { useNavigate } from "react-router-dom";
 
 const initialData = {
   name: "",
@@ -11,7 +13,10 @@ const initialData = {
 };
 
 const Register = () => {
+  const auth = useContext(context);
+  console.log(auth.isAuth);
   const [register, setRegister] = useState(initialData);
+  const navigate = useNavigate();
 
   const inputEvent = (e) => {
     const { name, value } = e.target;
@@ -29,6 +34,7 @@ const Register = () => {
         withCredentials: true,
       });
       console.log(api);
+      auth.setIsAuth(true);
       toast.success(api.data.massage, {
         position: "top-center",
         autoClose: 5000,
@@ -39,8 +45,12 @@ const Register = () => {
         progress: undefined,
         theme: "dark",
       });
+      setTimeout(() => {
+        navigate('/login');
+      }, "3000");
     } catch (error) {
       console.warn(error);
+      auth.setIsAuth(false);
       toast.error(error.response.data.massage, {
         position: "top-center",
         autoClose: 5000,

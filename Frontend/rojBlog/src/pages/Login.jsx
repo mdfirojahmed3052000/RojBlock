@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from 'react-router-dom';
+import context from "../context/Context";
 
 const Login = () => {
+  const auth = useContext(context);
   const [email, setname] = useState("");
   const [password, setpassword] = useState("");
   const navigate = useNavigate();
-
+  console.log(auth);
   const onSubmit = async (e) => {
     e.preventDefault();
     console.log(email, password);
@@ -28,6 +30,7 @@ const Login = () => {
         }
       );
       console.log(api);
+      auth.setIsAuth(true);
       toast.success(api.data.massage, {
         position: "top-center",
         autoClose: 5000,
@@ -46,6 +49,7 @@ const Login = () => {
 
     } catch (error) {
       console.warn(error);
+      auth.setIsAuth(false);
       toast.error(error.response.data.massage, {
         position: "top-center",
         autoClose: 5000,

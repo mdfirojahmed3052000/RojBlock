@@ -13,17 +13,56 @@ const Loder = () => {
       <div></div>
   </div>*/}
 
-      <div class="loader">
-        <div class="wrapper">
-          <div class="line-1"></div>
-          <div class="line-2"></div>
-          <div class="line-2a"></div>
-          <div class="line-2b"></div>
-          <div class="circle"></div>
-          <div class="line-3"></div>
-          <div class="line-4"></div>
-          <div class="line-5"></div>
-          <div class="line-6"></div>
+      <div className="loader">
+        <div className="wrapper">
+          <div className="line-1"></div>
+          <div className="line-2"></div>
+          <div className="line-2a"></div>
+          <div className="line-2b"></div>
+          <div className="circle"></div>
+          <div className="line-3"></div>
+          <div className="line-4"></div>
+          <div className="line-5"></div>
+          <div className="line-6"></div>
+        </div>
+      </div>
+      <div className="loader">
+        <div className="wrapper">
+          <div className="line-1"></div>
+          <div className="line-2"></div>
+          <div className="line-2a"></div>
+          <div className="line-2b"></div>
+          <div className="circle"></div>
+          <div className="line-3"></div>
+          <div className="line-4"></div>
+          <div className="line-5"></div>
+          <div className="line-6"></div>
+        </div>
+      </div>
+      <div className="loader">
+        <div className="wrapper">
+          <div className="line-1"></div>
+          <div className="line-2"></div>
+          <div className="line-2a"></div>
+          <div className="line-2b"></div>
+          <div className="circle"></div>
+          <div className="line-3"></div>
+          <div className="line-4"></div>
+          <div className="line-5"></div>
+          <div className="line-6"></div>
+        </div>
+      </div>
+      <div className="loader">
+        <div className="wrapper">
+          <div className="line-1"></div>
+          <div className="line-2"></div>
+          <div className="line-2a"></div>
+          <div className="line-2b"></div>
+          <div className="circle"></div>
+          <div className="line-3"></div>
+          <div className="line-4"></div>
+          <div className="line-5"></div>
+          <div className="line-6"></div>
         </div>
       </div>
     </>
