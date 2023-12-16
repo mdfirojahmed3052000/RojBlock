@@ -41,7 +41,7 @@ const Register = () => {
       });
     } catch (error) {
       console.warn(error);
-      /*toast.error(error.response.data.massage, {
+      toast.error(error.response.data.massage, {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -50,7 +50,7 @@ const Register = () => {
         draggable: true,
         progress: undefined,
         theme: "dark",
-        });*/
+        });
     }
     //setRegister(initialData);
   };

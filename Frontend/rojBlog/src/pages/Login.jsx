@@ -1,35 +1,79 @@
 import React, { useState } from "react";
 import axios from "axios";
-const Login = () => {
-  const [email,setname] =useState("");
-  const [password,setpassword] =useState("");
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from 'react-router-dom';
 
-  const onSubmit=async (e)=>{
+const Login = () => {
+  const [email, setname] = useState("");
+  const [password, setpassword] = useState("");
+  const navigate = useNavigate();
+
+  const onSubmit = async (e) => {
     e.preventDefault();
-    console.log( email , password);
+    console.log(email, password);
     try {
-      const url= "https://rojblog.onrender.com/api/user/logIn"
-      const api  =  await axios.post(url,{
-        email,
-        password
-      },
-      {
-        
-        headers:{
-          
-          "Content-Type":"application/json"
+      const url = "https://rojblog.onrender.com/api/user/logIn";
+      const api = await axios.post(
+        url,
+        {
+          email,
+          password,
         },
-        withCredentials:true,
-      });
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          withCredentials: true,
+        }
+      );
       console.log(api);
+      toast.success(api.data.massage, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+      setTimeout(() => {
+        navigate("/profile");
+      }, "3000");
+
+      
+
     } catch (error) {
       console.warn(error);
+      toast.error(error.response.data.massage, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
     }
-  }
+  };
   return (
     <>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
       <div className="formbody">
-        <form onSubmit={onSubmit} >
+        <form onSubmit={onSubmit}>
           <h1>LOGIN</h1>
 
           <input
@@ -38,7 +82,7 @@ const Login = () => {
             name="email"
             id="email"
             value={email}
-            onChange={(e)=>setname(e.target.value)}
+            onChange={(e) => setname(e.target.value)}
           />
           <input
             placeholder="Enter Your Password"
@@ -46,7 +90,7 @@ const Login = () => {
             name="password"
             id="password"
             value={password}
-            onChange={(e)=>setpassword(e.target.value)}
+            onChange={(e) => setpassword(e.target.value)}
           />
           <input type="submit" value="Login" />
         </form>
