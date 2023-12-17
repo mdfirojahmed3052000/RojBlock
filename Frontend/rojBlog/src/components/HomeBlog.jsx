@@ -11,12 +11,12 @@ const HomeBlog = ({ data }) => {
           "Content-Type": "application/json",
         },
       });
-      //console.log("user ", userdata.data.user);
+      console.log("user ", userdata.data.user);
       setuser(userdata.data.user);
     };
     getUserdata();
-  }, []);
-  //console.log(data);
+  }, [data._id]);
+  console.log(user);
   return (
     <>
       <div className="homeBlog">
