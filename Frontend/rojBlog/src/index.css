@@ -206,5 +206,22 @@ form > input[type="submit"]:hover {
   transform: scale(1.2);
 }
 
+/* profile page start */
 
+.profile{
+  border: 2px solid red ;
+  height: 85vh;
+  width: 90%;
+  margin-left: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.profileNav{
+  border: 2px solid blue ;
+  width: 20%;
+}
+.profileBlog{
+  border: 2px solid green ;
+  width: 80%;
+}
 

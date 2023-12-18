@@ -15,7 +15,7 @@ const HomeBlog = ({ data }) => {
       setuser(userdata.data.user);
     };
     getUserdata();
-  }, [data._id]);
+  }, [user]);
   console.log(user);
   return (
     <>
