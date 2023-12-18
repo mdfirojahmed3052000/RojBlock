@@ -45,7 +45,6 @@ const AddBlog = () => {
       }, "3000");
     } catch (error) {
       console.warn(error);
-      auth.setIsAuth(false);
       toast.error(error.response.data.massage, {
         position: "top-center",
         autoClose: 5000,

@@ -4,7 +4,7 @@ import Avatar from "../../../assets/avatar.png";
 import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import Context from "../../../context/Context";
+import Context from "../../context/Context";
 
 const ProfileNav = () => {
   const auth = useContext(Context);
