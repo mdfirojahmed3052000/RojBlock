@@ -215,10 +215,12 @@ form > input[type="submit"]:hover {
   margin-left: 5%;
   display: flex;
   justify-content: space-between;
+  
 }
 .profileNav{
   border: 2px solid blue ;
   width: 20%;
+  background-color: #a6a9e8;
 }
 .profileBlog{
   border: 2px solid green ;
