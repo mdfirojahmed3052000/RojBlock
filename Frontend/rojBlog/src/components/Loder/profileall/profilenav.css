@@ -1,6 +1,5 @@
 .NavProfile{
-    border: 2px solid green ;
-    height: 90%;
+    /*border: 2px solid green ;*/
     
     margin: 10% 10px;
 
@@ -8,11 +7,12 @@
 }
 
 .ProfileData{
-    border: 2px solid pink ;
+    /*border: 2px solid pink ;*/
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    margin-bottom: 30px;
 }
 .profileImage{
     margin-top: 15px;
@@ -22,15 +22,15 @@
 
 }
 .profilename{
-    border: 2px solid red ;
+    /*border: 2px solid red ;*/
 
 }
 .profileemail{
-    border: 2px solid red ;
+    /*border: 2px solid red ;*/
     width: 90%;
 }
 .ProfileLink{
-    border: 2px solid red ;
+    /*border: 2px solid red ;*/
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -47,11 +47,11 @@
 .Linkitem:hover{
     border-radius: 8px;
     border: 1px solid ;
-    padding: 0em 1em;
+    padding: 0px 1.9rem;
     font-size: 0.9em;
     font-weight: 300;
     font-family: inherit;
-    background-color: #565353a1;
+    background-color: #bfb7b7a1;
     cursor: pointer;
     transition: border-color 0.25s;
     border-color: #646cffda;

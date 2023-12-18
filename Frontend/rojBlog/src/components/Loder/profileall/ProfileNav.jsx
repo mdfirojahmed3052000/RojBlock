@@ -53,8 +53,11 @@ const ProfileNav = () => {
           <img src={Avatar} className="profileImage" />
           <h2 className="profilename">MD FIROJ AHMED</h2>
           <h3 className="profileemail">
-            firojahmedlearntoearn3052000@gmail.com
+            firojahmed30@gmail.com
           </h3>
+          <button onClick={() => editBlog} type="submit">
+           Extra
+          </button>
         </div>
         <div className="ProfileLink">
           <Link to={"/"} className="Linkitem">

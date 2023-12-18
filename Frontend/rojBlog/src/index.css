@@ -209,8 +209,8 @@ form > input[type="submit"]:hover {
 /* profile page start */
 
 .profile{
-  border: 2px solid red ;
-  height: 85vh;
+  /*border: 2px solid red ;*/
+  margin-top: 15px;
   width: 90%;
   margin-left: 5%;
   display: flex;
@@ -218,12 +218,23 @@ form > input[type="submit"]:hover {
   
 }
 .profileNav{
-  border: 2px solid blue ;
+  /*border: 2px solid blue ;*/
   width: 20%;
+  border-radius: 20px;
   background-color: #a6a9e8;
+  box-shadow: -10px 10px 70px rgba(69, 102, 146, 0.25);
+  height: max-content;
+  position: fixed;
 }
 .profileBlog{
-  border: 2px solid green ;
-  width: 80%;
+  /*border: 2px solid green ;*/
+  width: 75%;
+  position: absolute;
+  left: 25%;
+  
 }
+.editDelete{
+  display: flex;
+  justify-content: space-around;
 
+}

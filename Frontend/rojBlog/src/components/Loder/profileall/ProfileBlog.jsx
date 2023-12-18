@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import Blogeditdelete from "./Blogeditdelete";
 
 const ProfileBlog = () => {
   return (
-    <div>ProfileBlog</div>
-  )
-}
+    <>
+      <div className="b">
+        <Blogeditdelete />
+        <Blogeditdelete />
+        <Blogeditdelete />
+      </div>
+    </>
+  );
+};
 
-export default ProfileBlog
+export default ProfileBlog;
