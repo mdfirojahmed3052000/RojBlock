@@ -1,6 +1,6 @@
 import React from "react";
-import ProfileNav from "../components/Loder/profileall/ProfileNav";
-import ProfileBlog from "../components/Loder/profileall/ProfileBlog";
+import ProfileNav from "../components/profileall/ProfileNav";
+import ProfileBlog from "../components/profileall/ProfileBlog";
 
 const Profile = () => {
   return (
